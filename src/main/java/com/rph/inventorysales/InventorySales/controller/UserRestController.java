@@ -13,7 +13,7 @@ import com.rph.inventorysales.InventorySales.model.User;
 import com.rph.inventorysales.InventorySales.service.UserService;
 
 @RestController
-@RequestMapping("user")
+@RequestMapping("/user")
 public class UserRestController {
 
 	@Autowired

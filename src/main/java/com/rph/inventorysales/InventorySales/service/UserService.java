@@ -38,16 +38,16 @@ public class UserService {
 	public void saveUser(User user) {
 		
 		Role roleUser = new Role();
-		roleUser.setName("ROLE_USER");
+		roleUser.setName("USER");
 		roleRepository.save(roleUser);
 		
 		Role roleAdmin = new Role();
-		roleAdmin.setName("ROLE_ADMIN");
+		roleAdmin.setName("ADMIN");
 		roleRepository.save(roleAdmin);
 		
 		List<Role> roles = new ArrayList<>();
-		roles.add(roleRepository.findByName("ROLE_USER"));
-		roles.add(roleRepository.findByName("ROLE_ADMIN"));
+		roles.add(roleRepository.findByName("USER"));
+		roles.add(roleRepository.findByName("ADMIN"));
 		user.setRoles(roles);
 		
 		List<Role> rolex = user.getRoles();
